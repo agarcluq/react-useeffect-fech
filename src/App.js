@@ -37,7 +37,7 @@ function MouseColor (){
       console.log('limpiando');
           window.removeEventListener("mousemove",onMouseMove)
     }
-  },[color]);
+  },[]);
 
 
   return  <div style={{height: "100vh" ,background:color}}></div>
