@@ -1,51 +1,28 @@
 import React, { useState, useEffect } from 'react';
 
-function App() {
-  const [isOn, setIsOn] = useState(false);
-  const [timer, setTimer] = useState(0);
 
-  useEffect(
-    () => {
-      let interval;
 
-      if (isOn) {
-        interval = setInterval(
-          () => setTimer(timer => timer + 1),
-          1000,
-        );
-      }
 
-      return () => clearInterval(interval);
-    },
-    [isOn],
-  );
-
-  const onReset = () => {
-    setIsOn(false);
-    setTimer(0);
-  };
+export default function App() {
+const [mostrar,setMostrar]=useState(false)
 
   return (
     <div>
-      {timer}
-
-      {!isOn && (
-        <button type="button" onClick={() => setIsOn(true)}>
-          Start
-        </button>
-      )}
-
-      {isOn && (
-        <button type="button" onClick={() => setIsOn(false)}>
-          Stop
-        </button>
-      )}
-
-      <button type="button" disabled={timer === 0} onClick={onReset}>
-        Reset
-      </button>
+    <button onClick={()=> setMostrar(false)}>
+    Deja de mostrar
+    </button>
+    <p>{mostrar ? <MouseColor/> : null}</p>
     </div>
-  );
+  )
+
+}
+function MouseColor (){
+  const [color,setColor] = useState("orange")
+
+  useEffect(() => {
+    
+  })
+  console.log('error')
+  return <div style={{height: "100vh" ,background:color}}/>
 }
 
-export default App;
