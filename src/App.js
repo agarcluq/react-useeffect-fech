@@ -28,8 +28,16 @@ function MouseColor (){
       }
     }
     // Quiero comprobar que el mouse de mueva y ejecutar dicha function. Esta renderizando cada vez que cambiamos el estado, y renderizando
-    window.addEventListener("mousemove",onMouseMove)
+    window.addEventListener("mousemove",onMouseMove);
+    console.log('ejecutando');
+
+    // Limpiar este effect cuando el componente no exista, no este montado
+    return () => {
+      console.log('limpiando');
+          window.removeEventListener("mousemove",onMouseMove)
+    }
   },[]);
+    console.log('ejecuta')
 
   return  <div style={{height: "100vh" ,background:color}}></div>
 }
