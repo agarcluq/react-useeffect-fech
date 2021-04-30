@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 
 export default function App() {
-const [mostrar,setMostrar]=useState(false)
+const [mostrar,setMostrar]=useState(true)
 
   return (
     <div>
@@ -23,6 +23,6 @@ function MouseColor (){
     
   })
   console.log('error')
-  return <div style={{height: "100vh" ,background:color}}/>
+  return  <div style={{height: "100vh" ,background:color}}></div>
 }
 
