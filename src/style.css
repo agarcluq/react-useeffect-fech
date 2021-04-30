@@ -1,3 +1,8 @@
 h1, p {
   font-family: Lato;
 }
+
+.prueba{
+  background-color: "pink";
+  height: 100vh;
+}
