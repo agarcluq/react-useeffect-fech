@@ -31,7 +31,8 @@ function MouseColor (){
     window.addEventListener("mousemove",onMouseMove);
     console.log('ejecutando');
 
-    // Limpiar este effect cuando el componente no exista, no este montado
+    // Limpiar este effect cuando el componente no exista, no este montado. Se ejecuta cuando se desmonta, y cuando hace algo el estado
+    //Limpia y ejecuta, si no tiene []
     return () => {
       console.log('limpiando');
           window.removeEventListener("mousemove",onMouseMove)
