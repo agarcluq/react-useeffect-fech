@@ -27,10 +27,10 @@ function MouseColor (){
         setColor('blue')
       }
     }
-    // Quiero comprobar que el mouse de mueva y ejecutar dicha function
+    // Quiero comprobar que el mouse de mueva y ejecutar dicha function. Esta renderizando cada vez que cambiamos el estado, y renderizando
     window.addEventListener("mousemove",onMouseMove)
-  })
-  console.log('error')
+  },[]);
+
   return  <div style={{height: "100vh" ,background:color}}></div>
 }
 
