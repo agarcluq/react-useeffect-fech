@@ -11,7 +11,7 @@ const [mostrar,setMostrar]=useState(true)
     <button onClick={()=> setMostrar(false)}>
     Deja de mostrar
     </button>
-    <p>{mostrar ? <MouseColor/> : null}</p>
+    {mostrar ? <MouseColor/> : null}
     </div>
   )
 
